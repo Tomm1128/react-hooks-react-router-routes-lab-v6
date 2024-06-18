@@ -27,6 +27,7 @@ function Actors() {
       <header>
         <NavBar />
       </header>
+      <h1>Actors Page</h1>
       <main>{actorsList}</main>
     </>
   )
