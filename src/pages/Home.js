@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar"
 import MovieCard from "../components/MovieCard"
 
 function Home() {
@@ -8,12 +8,12 @@ function Home() {
 
   useEffect(() => {
     fetch("http://localhost:4000/movies")
-    .then(resp => resp.json())
-    .then(movies => setMovies(movies))
-  })
+      .then((resp) => resp.json())
+      .then((movies) => setMovies(movies))
+  }, [])
 
-  const movieList = movies.map(movie => {
-    return <MovieCard title={movie.title}/>
+  const movieList = movies.map((movie) => {
+    return <MovieCard key={movie.id} title={movie.title} id={movie.id} />
   })
 
   return (
@@ -26,7 +26,7 @@ function Home() {
         {movieList}
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,20 +1,25 @@
-import Directors from "./pages/Directors";
+import Directors from "./pages/Directors"
 import Home from "./pages/Home"
 import Actors from "./pages/Actors"
+import Movie from "./pages/Movie"
 
 const routes = [
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
   },
   {
     path: "/directors",
-    element: <Directors />
+    element: <Directors />,
   },
   {
     path: "/actors",
-    element: <Actors />
-  }
-];
+    element: <Actors />,
+  },
+  {
+    path: "/movie/:id",
+    element: <Movie />,
+  },
+]
 
-export default routes;
+export default routes
